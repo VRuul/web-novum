@@ -1,250 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novum Finanzas | Gestión Financiera Inteligente</title>
-    <!-- Google Fonts: Outfit e Inter para un look Pixel Premium -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    <title>Novum Finanzas | Gestión Inteligente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Paleta de colores Premium (Inspirada en tu app) */
             --primary: #6750A4;
             --primary-container: #EADDFF;
-            --on-primary-container: #21005D;
             --surface: #FDFBFF;
-            --outline: #79747E;
             --text-main: #1C1B1F;
             --text-secondary: #49454F;
             --radius-xl: 28px;
-            --radius-md: 16px;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--surface);
-            color: var(--text-main);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1,
-        h2,
-        h3 {
-            font-family: 'Outfit', sans-serif;
-        }
-
-        header {
-            background: linear-gradient(135deg, #6750A4 0%, #B69DF8 100%);
-            padding: 80px 20px;
-            text-align: center;
-            color: white;
-            border-bottom-left-radius: 40px;
-            border-bottom-right-radius: 40px;
-            box-shadow: 0 10px 30px rgba(103, 80, 164, 0.1);
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .logo-placeholder {
-            width: 80px;
-            height: 80px;
-            background: white;
-            border-radius: 20px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            letter-spacing: -0.5px;
-        }
-
-        .hero-subtitle {
-            font-size: 1.25rem;
-            opacity: 0.95;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin: 60px 0;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 30px;
-            border-radius: var(--radius-xl);
-            border: 1px solid var(--primary-container);
-            transition: transform 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            font-size: 24px;
-            color: var(--primary);
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .feature-card h3 {
-            margin-bottom: 10px;
-            color: var(--on-primary-container);
-        }
-
-        .feature-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        /* Estilo para la Política de Privacidad */
-        #privacy-policy {
-            background: #f4f2f8;
-            padding: 60px 40px;
-            border-radius: var(--radius-xl);
-            margin-top: 80px;
-        }
-
-        #privacy-policy h2 {
-            margin-bottom: 30px;
-            color: var(--primary);
-            text-align: center;
-            font-size: 2rem;
-        }
-
-        .policy-content {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            text-align: justify;
-        }
-
-        .policy-content h4 {
-            margin: 25px 0 10px;
-            color: var(--on-primary-container);
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: var(--outline);
-            font-size: 0.8rem;
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-
-            #privacy-policy {
-                padding: 30px 20px;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--surface); color: var(--text-main); line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Outfit', sans-serif; }
+        header { background: linear-gradient(135deg, #6750A4 0%, #B69DF8 100%); padding: 60px 20px; text-align: center; color: white; border-bottom-left-radius: 40px; border-bottom-right-radius: 40px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .logo-placeholder { width: 70px; height: 70px; background: white; border-radius: 18px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 35px; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 40px 0; }
+        .feature-card { background: white; padding: 25px; border-radius: var(--radius-xl); border: 1px solid var(--primary-container); }
+        .feature-icon { font-size: 24px; color: var(--primary); margin-bottom: 10px; display: block; }
+        footer { text-align: center; padding: 40px; color: var(--text-secondary); font-size: 0.9rem; }
+        footer a { color: var(--primary); text-decoration: none; font-weight: 600; margin-top: 10px; display: inline-block; }
     </style>
 </head>
-
 <body>
-
     <header>
         <div class="logo-placeholder">📊</div>
         <h1>Novum Finanzas</h1>
-        <p class="hero-subtitle">Gestión financiera inteligente con privacidad garantizada y automatización real.</p>
+        <p>Gestión financiera inteligente con privacidad garantizada.</p>
     </header>
-
     <div class="container">
         <section class="features">
             <div class="feature-card">
                 <span class="feature-icon">☁️</span>
-                <h3>Respaldos Seguros</h3>
-                <p>Usa tu propia cuenta de Google Drive para mantener tus datos a salvo y sincronizados entre
-                    dispositivos.</p>
+                <h3>Respaldos en la Nube</h3>
+                <p>Usa Google Drive para mantener tus datos sincronizados de forma privada.</p>
             </div>
             <div class="feature-card">
                 <span class="feature-icon">🤖</span>
-                <h3>Inteligencia Artificial</h3>
-                <p>Escaneo automático de recibos y notificaciones mediante Gemini 1.5 Flash para que nunca olvides un
-                    gasto.</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">🔒</span>
-                <h3>Privacidad Absoluta</h3>
-                <p>Tus datos financieros residen exclusivamente en tu dispositivo y en tu bóveda privada de la nube.</p>
-            </div>
-        </section>
-
-        <!-- Sección de Política de Privacidad para Verificación de Google -->
-        <section id="privacy-policy">
-            <h2>Política de Privacidad</h2>
-            <div class="policy-content">
-                <p><strong>Última actualización: 27 de Marzo de 2026</strong></p>
-                <p>Victor Raul Ortiz Garcia (en adelante, "el Desarrollador") ha creado la aplicación <strong>"Novum
-                        Finanzas"</strong> (en adelante, "la Aplicación") como una herramienta dedicada a la gestión
-                    financiera personal. Esta Política de Privacidad tiene como objetivo detallar cómo protegemos su
-                    información.</p>
-
-                <h4>1. Recopilación y Uso de la Información</h4>
-                <p>Novum Finanzas funciona bajo un modelo de almacenamiento local primario. Sus registros de gastos,
-                    ingresos, presupuestos y metas residen directamente en su dispositivo móvil y el Desarrollador no
-                    tiene acceso a esta información.</p>
-
-                <h4>2. Copia de Seguridad en la Nube (Google Drive)</h4>
-                <p>La Aplicación ofrece la opción de respaldar su base de datos en Google Drive. Para ello, solicita
-                    acceso al alcance (scope) <code>drive.appdata</code>. Este permiso es restrictivo y solo permite que
-                    la Aplicación cree y gestione sus propios archivos en una carpeta privada de su cuenta de Drive. La
-                    Aplicación NO tiene acceso a otros archivos, fotos o documentos del usuario.</p>
-
-                <h4>3. Automatización e IA (Gemini)</h4>
-                <p>Al utilizar funciones de IA, los datos de recibos se procesan mediante la API de Google Gemini
-                    utilizando la Clave API personal del usuario. El procesamiento es seguro y los resultados solo se
-                    almacenan localmente en el dispositivo del usuario.</p>
-
-                <h4>4. Acceso a Notificaciones</h4>
-                <p>Si se activa la automatización, la Aplicación monitoriza las notificaciones bancarias locales para
-                    registrar transacciones automáticamente. Este procesamiento ocurre íntegramente de forma local en
-                    tiempo real y la información nunca es enviada a servidores externos.</p>
-
-                <h4>5. Eliminación de Datos</h4>
-                <p>El usuario tiene el control total de sus datos y puede eliminarlos en cualquier momento borrando el
-                    almacenamiento local de la aplicación o gestionando su cuenta vinculada de Google Drive.</p>
-
-                <h4>6. Contacto</h4>
-                <p>Para cualquier consulta sobre privacidad, puede contactar al desarrollador en:
-                    <strong>victorraulortizgarcia@gmail.com</strong></p>
+                <h3>IA de Vanguardia</h3>
+                <p>Automatización de gastos con Gemini 1.5 Flash.</p>
             </div>
         </section>
     </div>
-
     <footer>
-        <p>&copy; 2026 Novum Finanzas - Victor Raul Ortiz Garcia</p>
-        <p>Producido con los estándares de Material 3 y seguridad de Google Cloud.</p>
+        <p>&copy; 2026 Novum Finanzas</p>
+        <a href="privacy.html">Política de Privacidad</a>
     </footer>
-
 </body>
-
 </html>
