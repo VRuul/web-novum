@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions | Novum Finanzas</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #000000;
+            --surface: #FFFFFF;
+            --accent-blue: #B3E5FC;
+            --text-main: #000000;
+            --text-secondary: #616161;
+            --card-bg: #fdfdfd;
+            --radius-lg: 24px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--surface);
+            color: var(--text-main);
+            padding: 80px 20px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: var(--radius-lg);
+            border: 1px solid #eee;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+            position: relative;
+        }
+
+        .lang-switch {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            background: white;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+            transition: 0.3s;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .effective-date {
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: 40px;
+            display: block;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            font-size: 1.5rem;
+            color: var(--text-main);
+            border-left: 4px solid var(--accent-blue);
+            padding-left: 16px;
+        }
+
+        h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+            color: var(--text-main);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        ul {
+            margin-bottom: 24px;
+            padding-left: 20px;
+            color: var(--text-secondary);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background: #f1f1f1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 40px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+            color: var(--text-secondary);
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        .disclaimer-box {
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            padding: 24px;
+            border-radius: 16px;
+            margin: 32px 0;
+        }
+
+        .disclaimer-box p {
+            margin-bottom: 0;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 30px; }
+            .lang-switch { position: static; margin-bottom: 30px; justify-content: flex-end; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <button id="btn-es" class="lang-btn active" onclick="switchLang('es')">ES</button>
+            <button id="btn-en" class="lang-btn" onclick="switchLang('en')">EN</button>
+        </div>
+
+        <a href="index.html" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Volver al inicio / Back to Home
+        </a>
+
+        <!-- Spanish Content -->
+        <article id="lang-es" class="content-section active">
+            <h1>Términos y Condiciones</h1>
+            <span class="effective-date">Fecha de entrada en vigor: 30 de marzo de 2026</span>
+
+            <p>Estos Términos y Condiciones ("Términos") rigen el uso de la aplicación móvil Novum Finanzas (la "App")
+                desarrollada por Victor Raul Ortiz Garcia ("Desarrollador," "nosotros," "nos" o "nuestro"). Al descargar,
+                instalar o utilizar la App, usted acepta quedar vinculado por estos Términos.</p>
+
+            <h2>1. Descripción del Servicio</h2>
+            <p>Novum Finanzas es una herramienta de gestión de finanzas personales diseñada para ayudar a los usuarios a
+                realizar un seguimiento de transacciones, presupuestos, cuentas y metas financieras. La App incluye
+                funciones de automatización e integraciones de Inteligencia Artificial (IA).</p>
+
+            <div class="disclaimer-box">
+                <p>2. Ausencia de Asesoramiento Financiero</p>
+                <p style="font-weight: 400; margin-top: 8px; color: var(--text-secondary);">
+                    LA APP TIENE ÚNICAMENTE FINES INFORMATIVOS Y DE SEGUIMIENTO. NO PROPORCIONA ASESORAMIENTO PROFESIONAL
+                    FINANCIERO, FISCAL O DE INVERSIÓN. Usted es el único responsable de sus decisiones financieras.
+                </p>
+            </div>
+
+            <h2>3. Almacenamiento de Datos y Responsabilidad</h2>
+            <ul>
+                <li><strong>Almacenamiento Local:</strong> Todos los datos financieros se almacenan localmente en su
+                    dispositivo. Nosotros no tenemos acceso a sus datos.</li>
+                <li><strong>Responsabilidad de los Respaldos:</strong> Usted es el único responsable de crear y mantener
+                    copias de seguridad. El Desarrollador no se hace responsable de ninguna pérdida de datos debida a
+                    fallos del dispositivo o servicios de terceros.</li>
+                <li><strong>Seguridad:</strong> Usted es responsable de proteger su dispositivo para evitar el acceso
+                    no autorizado.</li>
+            </ul>
+
+            <h2>4. Integraciones de Terceros</h2>
+            <ul>
+                <li><strong>Google AI (Gemini):</strong> Para utilizar las funciones de IA, debe proporcionar su propia clave API de Gemini. Usted es el único responsable de los costos y del cumplimiento de los términos de Google. <strong>Reconocimiento de errores:</strong> Usted reconoce que la IA puede generar información inexacta (alucinaciones) y debe verificar siempre los resultados generados.</li>
+                <li><strong>Google Drive:</strong> El respaldo en la nube es una copia espejo de su base de datos local guardada en su cuenta personal de Google Drive. El Desarrollador no tiene control sobre la infraestructura de Google ni sobre la integridad de dichos archivos una vez que salen de su dispositivo.</li>
+            </ul>
+
+            <h2>5. Propiedad Intelectual</h2>
+            <p>La App, su diseño, código y contenido original son propiedad de Victor Raul Ortiz Garcia. Se le concede
+                una licencia limitada para uso personal.</p>
+
+            <h2>6. Limitación de Responsabilidad</h2>
+            <p><strong>EL DESARROLLADOR NO SERÁ RESPONSABLE DE NINGÚN DAÑO DIRECTO O INDIRECTO, INCLUYENDO PÉRDIDA DE
+                    DATOS, ERRORES GENERADOS POR IA O PÉRDIDAS FINANCIERAS DERIVADAS DEL USO DE LA APP.</strong></p>
+
+            <h2>7. Ley Aplicable</h2>
+            <p>Estos Términos se rigen por las leyes de México.</p>
+
+            <h2>8. Contacto</h2>
+            <p>
+                <strong>Victor Raul Ortiz Garcia</strong><br>
+                <strong>Email:</strong> victorraulortizgarcia@gmail.com<br>
+                <strong>Comunidad:</strong> <a href="https://discord.gg/KVqeuEBHcV" target="_blank" style="color: var(--text-main);">Unirse a Discord</a>
+            </p>
+        </article>
+
+        <!-- English Content -->
+        <article id="lang-en" class="content-section">
+            <h1>Terms and Conditions</h1>
+            <span class="effective-date">Effective Date: March 30, 2026</span>
+
+            <p>These Terms and Conditions ("Terms") govern your use of the Novum Finanzas mobile application (the "App")
+                developed by Victor Raul Ortiz Garcia ("Developer," "we," "us," or "our"). By downloading, installing, or
+                using the App, you agree to be bound by these Terms.</p>
+
+            <h2>1. Description of Service</h2>
+            <p>Novum Finanzas is a personal finance management tool designed to track transactions, budgets, accounts,
+                and financial goals. The App includes automation and AI features.</p>
+
+            <div class="disclaimer-box">
+                <p>2. No Financial Advice</p>
+                <p style="font-weight: 400; margin-top: 8px; color: var(--text-secondary);">
+                    THE APP IS FOR INFORMATIONAL AND TRACKING PURPOSES ONLY. IT DOES NOT PROVIDE PROFESSIONAL FINANCIAL,
+                    TAX, OR INVESTMENT ADVICE. You are solely responsible for your financial decisions.
+                </p>
+            </div>
+
+            <h2>3. Data Storage and User Responsibility</h2>
+            <ul>
+                <li><strong>Local Storage:</strong> All data is stored locally on your device. We do not have access.
+                </li>
+                <li><strong>Backup Responsibility:</strong> You are responsible for maintaining backups. The Developer
+                    is not liable for data loss from device failure or third-party cloud services.</li>
+                <li><strong>Security:</strong> You are responsible for securing your device to prevent unauthorized
+                    access.</li>
+            </ul>
+
+            <h2>4. Third-Party Integrations</h2>
+            <ul>
+                <li><strong>Google AI (Gemini):</strong> Requires your own API key. You are solely responsible for its costs and compliance with Google terms. <strong>AI Accuracy:</strong> You acknowledge that AI can generate inaccurate information (hallucinations) and must always verify all generated data.</li>
+                <li><strong>Google Drive:</strong> Cloud backup is a mirror copy of your local database stored in your personal Google account. The Developer has no control over Google's infrastructure or the integrity of these files once they leave your device.</li>
+            </ul>
+
+            <h2>5. Intellectual Property</h2>
+            <p>The App, design, and code are the property of Victor Raul Ortiz Garcia. You are granted a limited license
+                for personal use.</p>
+
+            <h2>6. Limitation of Liability</h2>
+            <p><strong>THE DEVELOPER SHALL NOT BE LIABLE FOR ANY DAMAGES, INCLUDING DATA LOSS OR FINANCIAL LOSSES
+                    ARISING FROM YOUR USE OF THE APP.</strong></p>
+
+            <h2>7. Governing Law</h2>
+            <p>These Terms are governed by the laws of Mexico.</p>
+
+            <h2>8. Contact Information</h2>
+            <p>
+                <strong>Victor Raul Ortiz Garcia</strong><br>
+                <strong>Email:</strong> victorraulortizgarcia@gmail.com<br>
+                <strong>Community:</strong> <a href="https://discord.gg/KVqeuEBHcV" target="_blank" style="color: var(--text-main);">Join our Discord</a>
+            </p>
+        </article>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            // Update buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('btn-' + lang).classList.add('active');
+
+            // Update sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById('lang-' + lang).classList.add('active');
+
+            // Update page title
+            document.title = (lang === 'es' ? 'Términos y Condiciones' : 'Terms and Conditions') + ' | Novum Finanzas';
+            
+            // Save preference
+            localStorage.setItem('novum-lang', lang);
+        }
+
+        // Auto-load lang from localStorage
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('novum-lang') || 'es';
+            switchLang(savedLang);
+        });
+    </script>
+</body>
+
+</html>

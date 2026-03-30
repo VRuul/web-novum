@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap');
+
+:root {
+    --primary: #000000;
+    --primary-gradient: linear-gradient(135deg, #333333 0%, #000000 100%);
+    --secondary-card: #424242;
+    --surface: #FFFFFF;
+    --text-main: #000000;
+    --text-secondary: #616161;
+    --income: #388E3C;
+    --expense: #D32F2F;
+    --accent-blue: #B3E5FC; /* Blue from capture */
+    --accent-soft: #F5F5F5;
+    --glass: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --radius-sm: 12px;
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--surface);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 5%;
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--glass-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Estilos para integrar el logo en el texto */
+.inline-logo {
+    display: inline-block;
+    fill: currentColor;
+    line-height: 1;
+    height: 1.55em;          /* Aumentado para que la 'N' interna coincida con las mayúsculas */
+    width: 1.55em;
+    vertical-align: -0.52em; /* Elevado ligeramente para alineación perfecta */
+    margin-right: -0.48em;   /* Unión extrema solicitada para palabra continua */
+    margin-left: -0.15em;    /* Proximidad con la palabra anterior */
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.lang-selector {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    background: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 140px 10% 60px;
+    background: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    color: var(--text-main);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+.cta-group {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary {
+    background: var(--text-main);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-secondary {
+    background: var(--accent-blue);
+    color: #1a237e;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #81D4FA;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-image img {
+    max-width: 90%;
+    transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+    filter: drop-shadow(50px 50px 100px rgba(0, 0, 0, 0.1));
+    border-radius: 40px;
+}
+
+/* Features (Bento Grid) */
+.features {
+    padding: 100px 10%;
+    background: white;
+}
+
+.section-tag {
+    color: var(--primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    gap: 24px;
+}
+
+.bento-item {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    transition: 0.3s;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.bento-item:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow);
+}
+
+.bento-item.large {
+    grid-column: span 2;
+    background: var(--primary-gradient);
+    color: white;
+}
+
+.bento-item.tall {
+    grid-row: span 2;
+}
+
+.bento-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.bento-title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.bento-desc {
+    color: var(--text-secondary);
+}
+
+.large .bento-desc {
+    color: rgba(255,255,255,0.8);
+}
+
+/* Product Tour */
+.product-tour {
+    padding: 100px 10%;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.category-tab {
+    padding: 12px 24px;
+    border-radius: 50px;
+    background: white;
+    border: 1px solid #eee;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    transition: 0.3s;
+    color: var(--text-secondary);
+}
+
+.category-tab.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tour-container {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tour-list {
+    flex: 1;
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 20px;
+}
+
+.tour-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tour-list::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 10px;
+}
+
+.tour-list-item {
+    padding: 24px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 12px;
+    border: 1px solid transparent;
+}
+
+.tour-list-item:hover {
+    background: white;
+}
+
+.tour-list-item.active {
+    background: white;
+    border-color: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.tour-list-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.tour-list-item p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.tour-display {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 120px;
+}
+
+.device-frame {
+    width: 320px;
+    height: 650px;
+    background: #1a1a1a;
+    border-radius: 54px;
+    padding: 8px;
+    box-shadow: 
+        0 50px 100px rgba(0,0,0,0.3),
+        inset 0 0 0 2px rgba(255,255,255,0.1);
+    position: relative;
+    border: 4px solid #3c3c3c; /* Metallic bezel look */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.device-frame::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: #000;
+    border-radius: 50%;
+    z-index: 10;
+    border: 2px solid #1a1a1a;
+}
+
+.device-screen {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 46px; /* Pixel-like extreme rounding */
+    overflow: hidden;
+    position: relative;
+}
+
+.device-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.tour-info-mobile {
+    display: none;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Featured Colors for Tabs (Optional integration) */
+.tour-list-item.active h3 {
+    color: var(--primary);
+}
+
+/* Security Section */
+.security-section {
+    padding: 60px 10% 120px;
+    background: white;
+    text-align: center;
+}
+
+.security-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.security-card {
+    padding: 40px;
+    background: #fdfdfd;
+    border-radius: var(--radius-lg);
+    border: 1px solid #f0f0f0;
+    transition: 0.3s;
+}
+
+.security-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    border-color: var(--accent-blue);
+}
+
+.security-icon {
+    font-size: 3rem;
+    margin-bottom: 24px;
+}
+
+.security-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: var(--text-main);
+}
+
+.security-card p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Footer (Updated with better padding) */
+footer {
+    padding: 80px 10% 40px;
+    background: #1C1B1F;
+    color: white;
+}
+
+footer .brand-name {
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    flex: 2;
+    max-width: 400px;
+}
+
+.footer-brand p {
+    margin-top: 20px;
+    color: rgba(255,255,255,0.6);
+    font-size: 1rem;
+}
+
+.footer-links {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-links h4 {
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    margin-bottom: 24px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 968px) {
+    .tour-container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .tour-list {
+        width: 100%;
+        max-height: none;
+        overflow-y: visible;
+        padding-right: 0;
+    }
+    
+    .tour-display {
+        position: relative;
+        top: 0;
+        margin-bottom: 40px;
+    }
+    
+    .tour-info-mobile {
+        display: block;
+    }
+    
+    .tour-list-item p {
+        display: none; /* Hide description in list for mobile */
+    }
+    
+    .tour-list-item.active p {
+        display: block; /* Show only for active */
+    }
+
+    .security-grid {
+        grid-template-columns: 1fr;
+    }
+}

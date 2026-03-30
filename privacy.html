@@ -1,37 +1,377 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad | Novum Finanzas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Privacy Policy | Novum Finanzas</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
     <style>
-        :root { --primary: #6750A4; --surface: #FDFBFF; --text-main: #1C1B1F; --text-secondary: #49454F; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--surface); color: var(--text-main); padding: 40px 20px; line-height: 1.6; }
-        .container { max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-        h1 { font-family: 'Outfit', sans-serif; color: var(--primary); margin-bottom: 20px; }
-        h2 { font-family: 'Outfit', sans-serif; margin-top: 30px; margin-bottom: 10px; font-size: 1.2rem; color: #21005D; }
-        p { margin-bottom: 15px; color: var(--text-secondary); text-align: justify; }
-        .back-link { display: inline-block; margin-bottom: 20px; color: var(--primary); text-decoration: none; font-weight: 600; }
+        :root {
+            --primary: #000000;
+            --surface: #FFFFFF;
+            --accent-blue: #B3E5FC;
+            --text-main: #000000;
+            --text-secondary: #616161;
+            --card-bg: #fdfdfd;
+            --radius-lg: 24px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--surface);
+            color: var(--text-main);
+            padding: 80px 20px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: var(--radius-lg);
+            border: 1px solid #eee;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+            position: relative;
+        }
+
+        .lang-switch {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            background: white;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+            transition: 0.3s;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .effective-date {
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: 40px;
+            display: block;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            font-size: 1.5rem;
+            color: var(--text-main);
+            border-left: 4px solid var(--accent-blue);
+            padding-left: 16px;
+        }
+
+        h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+            color: var(--text-main);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        ul {
+            margin-bottom: 24px;
+            padding-left: 20px;
+            color: var(--text-secondary);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background: #f1f1f1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 40px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+            color: var(--text-secondary);
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 30px; }
+            .lang-switch { position: static; margin-bottom: 30px; justify-content: flex-end; }
+            h1 { font-size: 2rem; }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← Volver al inicio</a>
-        <h1>Política de Privacidad</h1>
-        <p><strong>Última actualización: 27 de Marzo de 2026</strong></p>
-        
-        <h2>1. Almacenamiento Local</h2>
-        <p>Novum Finanzas almacena sus datos financieros exclusivamente en su dispositivo. El Desarrollador no tiene acceso a sus transacciones, presupuestos o categorías.</p>
+        <div class="lang-switch">
+            <button id="btn-es" class="lang-btn active" onclick="switchLang('es')">ES</button>
+            <button id="btn-en" class="lang-btn" onclick="switchLang('en')">EN</button>
+        </div>
 
-        <h2>2. Google Drive (Copia de Seguridad)</h2>
-        <p>Al activar el respaldo en la nube, la Aplicación utiliza el permiso <code>drive.appdata</code> para guardar una copia cifrada de su base de datos en su propia cuenta de Google Drive. La Aplicación solo puede acceder a sus propios archivos de respaldo y no tiene visibilidad sobre el resto de su unidad de Drive.</p>
+        <a href="index.html" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Volver al inicio / Back to Home
+        </a>
 
-        <h2>3. Inteligencia Artificial</h2>
-        <p>El procesamiento de recibos mediante IA se realiza de forma segura a través de los servicios de Google Gemini, utilizando la clave API del usuario y manteniendo la privacidad de los resultados en el almacenamiento local.</p>
+        <!-- Spanish Content -->
+        <article id="lang-es" class="content-section active">
+            <h1>Política de Privacidad</h1>
+            <span class="effective-date">Última actualización: 30 de marzo de 2026</span>
 
-        <h2>4. Contacto</h2>
-        <p>Si tiene preguntas sobre el manejo de sus datos, contacte a: victorraulortizgarcia@gmail.com</p>
+            <p>Victor Raul Ortiz Garcia ("nosotros," "nuestro" o "nos") opera la aplicación móvil Novum Finanzas (la
+                "App"). Estamos comprometidos con la protección de su privacidad y con garantizar que sus datos
+                financieros permanezcan seguros y bajo su control.</p>
+
+            <h2>1. Principio Fundamental: Privacidad Local</h2>
+            <p>Novum Finanzas está diseñada con una arquitectura de "prioridad local". Esto significa que:</p>
+            <ul>
+                <li><strong>Datos Financieros:</strong> Sus cuentas, transacciones, presupuestos y metas se almacenan
+                    localmente en su dispositivo en una base de datos segura.</li>
+                <li><strong>Sin Servidores Centrales:</strong> No operamos servidores centrales que almacenen su
+                    información financiera personal.</li>
+                <li><strong>Propiedad de los Datos:</strong> Usted es el dueño de sus datos. Nosotros no tenemos acceso
+                    a sus registros financieros.</li>
+            </ul>
+
+            <h2>2. Información que Recopilamos y Cómo la Utilizamos</h2>
+
+            <h3>A. Información Personal y Sensible</h3>
+            <p>La App puede acceder o procesar los siguientes tipos de información para proporcionar sus funciones
+                principales:</p>
+            <ul>
+                <li><strong>Información Financiera:</strong> Transacciones, saldos de cuentas y detalles de presupuestos
+                    que usted ingresa manualmente o que se detectan automáticamente mediante notificaciones.</li>
+                <li><strong>Datos de Notificaciones:</strong> Si activa la función "Lector de Notificaciones", la App
+                    lee las notificaciones entrantes de otras aplicaciones financieras para automatizar el registro de
+                    transacciones. <strong>Estos datos se procesan localmente en su dispositivo.</strong></li>
+                <li><strong>Aplicaciones Instaladas:</strong> Para identificar qué notificaciones pertenecen a
+                    aplicaciones financieras, la App consulta la lista de paquetes instalados. Esto se utiliza
+                    únicamente para filtrar notificaciones.</li>
+                <li><strong>Imágenes (Cámara/Galería):</strong> Si utiliza el Escaneo de Recibos con IA, la App accede a
+                    su cámara o galería para capturar imágenes de recibos.</li>
+                <li><strong>Datos Biométricos:</strong> Si se activa, la App utiliza las APIs estándar de su sistema operativo para la autenticación biométrica. <strong>Novum nunca recibe, procesa ni almacena sus datos biométricos reales</strong>; solo recibe una señal cifrada de identidad del sistema.</li>
+            </ul>
+
+            <h3>B. Servicios de Terceros y Uso Compartido de Datos</h3>
+            <p>Aunque no almacenamos sus datos en nuestros servidores, ciertas funciones implican la interacción con
+                servicios de terceros:</p>
+            <ul>
+                <li><strong>Google AI (Gemini):</strong> Si utiliza funciones de IA, la App envía texto o imágenes
+                    relevantes directamente desde su dispositivo a los servidores de Google AI. Esto requiere su propia
+                    clave API de Gemini.</li>
+                <li><strong>Google Drive (Respaldo):</strong> Si activa el Respaldo en la Nube, su base de datos cifrada
+                    se carga en su cuenta personal de Google Drive.</li>
+                <li><strong>Google Sign-In:</strong> Se utiliza para autenticar su cuenta para los respaldos.</li>
+            </ul>
+
+            <h2>3. Divulgación de Permisos Sensibles</h2>
+            <p>Divulgamos explícitamente el uso de los siguientes permisos:</p>
+            <ul>
+                <li><code>BIND_NOTIFICATION_LISTENER_SERVICE</code>: Necesario para registrar automáticamente las
+                    transacciones de sus notificaciones bancarias.</li>
+                <li><code>QUERY_ALL_PACKAGES</code>: Necesario para identificar qué aplicaciones financieras y
+                    bancarias están instaladas.</li>
+                <li><code>FOREGROUND_SERVICE</code>: Utilizado para mantener el monitoreo de notificaciones y la
+                    sincronización de datos.</li>
+            </ul>
+
+            <h2>4. Cero Telemetría</h2>
+            <p><strong>Privacidad del Comportamiento:</strong> No utilizamos servicios de análisis de terceros (como Firebase Analytics o Mixpanel) para rastrear lo que usted hace en Novum. Sus hábitos financieros y de navegación dentro de la App son completamente invisibles para nosotros.</p>
+
+            <h2>5. Retención y Eliminación de Datos</h2>
+            <ul>
+                <li><strong>Retención:</strong> Los datos se mantienen en su dispositivo mientras la App esté instalada.
+                </li>
+                <li><strong>Eliminación:</strong> Puede eliminar sus datos en "Configuración > Datos y Seguridad >
+                    Borrar todos los datos". Al desinstalar la App también se eliminarán todos los datos locales.</li>
+            </ul>
+
+            <h2>6. Seguridad</h2>
+            <p>Utilizamos cifrado estándar (<code>flutter_secure_storage</code>) y prácticas de base de datos seguras
+                (<code>drift</code> / <code>sqflite</code>). La seguridad también depende de la configuración de su
+                dispositivo.</p>
+
+            <h2>7. Contacto</h2>
+            <p>
+                <strong>Desarrollador:</strong> Victor Raul Ortiz Garcia<br>
+                <strong>Email:</strong> victorraulortizgarcia@gmail.com<br>
+                <strong>Comunidad:</strong> <a href="https://discord.gg/KVqeuEBHcV" target="_blank" style="color: var(--text-main);">Unirse a Discord</a>
+            </p>
+        </article>
+
+        <!-- English Content -->
+        <article id="lang-en" class="content-section">
+            <h1>Privacy Policy</h1>
+            <span class="effective-date">Effective Date: March 30, 2026</span>
+
+            <p>Victor Raul Ortiz Garcia ("we," "our," or "us") operates the Novum Finanzas mobile application (the
+                "App"). We are committed to protecting your privacy and ensuring that your financial data remains secure
+                and under your control.</p>
+
+            <h2>1. Core Principle: Local-First Privacy</h2>
+            <p>Novum Finanzas is designed with a "local-first" architecture. This means that:</p>
+            <ul>
+                <li><strong>Financial Data:</strong> Your accounts, transactions, budgets, and goals are stored locally
+                    on your device in a secure database.</li>
+                <li><strong>No Central Servers:</strong> We do not operate central servers that store your personal
+                    financial information.</li>
+                <li><strong>Data Ownership:</strong> You own your data. We do not have access to your financial records.
+                </li>
+            </ul>
+
+            <h2>2. Information We Collect and How We Use It</h2>
+
+            <h3>A. Personal and Sensitive Information</h3>
+            <p>The App may access or process the following types of information to provide its core features:</p>
+            <ul>
+                <li><strong>Financial Information:</strong> Transactions, account balances, and budget details that you
+                    manually enter or that are automatically detected via notifications.</li>
+                <li><strong>Notification Data:</strong> If you enable the "Notification Listener", the App reads
+                    incoming notifications from banking apps to automate transaction entry. <strong>This data is
+                        processed locally on your device.</strong></li>
+                <li><strong>Installed Applications:</strong> To identify banking apps, the App queries the list of
+                    installed packages. This is used solely to filter notifications.</li>
+                <li><strong>Images (Camera/Gallery):</strong> If you use the AI Receipt Scanning feature, the App
+                    accesses your camera or gallery to capture receipt images.</li>
+                <li><strong>Biometric Data:</strong> If enabled, the App uses your device's standard biometric APIs. <strong>Novum never receives, processes, or stores your real biometric data</strong>; it only receives an encrypted identity signal from the operating system.</li>
+            </ul>
+
+            <h3>B. Third-Party Services and Data Sharing</h3>
+            <p>While we do not store your data on our servers, certain features involve interaction with trusted
+                third-party services:</p>
+            <ul>
+                <li><strong>Google AI (Gemini):</strong> Uses your own Gemini API key to send relevant text or images
+                    directly from your device to Google AI servers.</li>
+                <li><strong>Google Drive (Backup):</strong> If enabled, your encrypted database is uploaded to your
+                    personal Google Drive account.</li>
+                <li><strong>Google Sign-In:</strong> Used to authenticate your account for Google Drive backups.</li>
+            </ul>
+
+            <h2>3. Sensitive Permissions Disclosure</h2>
+            <ul>
+                <li><code>BIND_NOTIFICATION_LISTENER_SERVICE</code>: Required to automatically detect and register
+                    transactions from your banking notifications.</li>
+                <li><code>QUERY_ALL_PACKAGES</code>: Required to identify which financial and banking apps are installed
+                    on your device.</li>
+                <li><code>FOREGROUND_SERVICE</code>: Used to maintain the connection for notification monitoring and
+                    data synchronization.</li>
+            </ul>
+
+            <h2>4. Zero Telemetry</h2>
+            <p><strong>Behavioral Privacy:</strong> We do not use third-party analytics services (such as Firebase Analytics or Mixpanel) to track your actions in Novum. Your financial and navigation habits within the App are completely invisible to us.</p>
+
+            <h2>5. Data Retention and Deletion</h2>
+            <ul>
+                <li><strong>Retention:</strong> Data is kept on your device as long as the App is installed.</li>
+                <li><strong>Deletion:</strong> You can delete all your data via "Settings > Data & Security > Delete all
+                    data". Uninstalling the App will also remove all local data.</li>
+            </ul>
+
+            <h2>5. Security</h2>
+            <p>We use industry-standard encryption (<code>flutter_secure_storage</code>) and secure database practices
+                (<code>drift</code> / <code>sqflite</code>). Security also depends on your device's security.</p>
+
+            <h2>6. Contact Us</h2>
+            <p>
+                <strong>Developer:</strong> Victor Raul Ortiz Garcia<br>
+                <strong>Email:</strong> victorraulortizgarcia@gmail.com<br>
+                <strong>Community:</strong> <a href="https://discord.gg/KVqeuEBHcV" target="_blank" style="color: var(--text-main);">Join our Discord</a>
+            </p>
+        </article>
     </div>
+
+    <script>
+        function switchLang(lang) {
+            // Update buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('btn-' + lang).classList.add('active');
+
+            // Update sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById('lang-' + lang).classList.add('active');
+
+            // Update page title
+            document.title = (lang === 'es' ? 'Política de Privacidad' : 'Privacy Policy') + ' | Novum Finanzas';
+            
+            // Save preference
+            localStorage.setItem('novum-lang', lang);
+        }
+
+        // Auto-load lang from localStorage
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('novum-lang') || 'es';
+            switchLang(savedLang);
+        });
+    </script>
 </body>
+
 </html>

@@ -1,57 +1,218 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novum Finanzas | Gestión Inteligente</title>
-    <meta name="google-site-verification" content="D2gWA7eWmm_4Ldm61fRj7XhMxhnBoAfo_BamcEQaGz4" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #6750A4;
-            --primary-container: #EADDFF;
-            --surface: #FDFBFF;
-            --text-main: #1C1B1F;
-            --text-secondary: #49454F;
-            --radius-xl: 28px;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--surface); color: var(--text-main); line-height: 1.6; }
-        h1, h2, h3 { font-family: 'Outfit', sans-serif; }
-        header { background: linear-gradient(135deg, #6750A4 0%, #B69DF8 100%); padding: 60px 20px; text-align: center; color: white; border-bottom-left-radius: 40px; border-bottom-right-radius: 40px; }
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        .logo-placeholder { width: 70px; height: 70px; background: white; border-radius: 18px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 35px; }
-        h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 40px 0; }
-        .feature-card { background: white; padding: 25px; border-radius: var(--radius-xl); border: 1px solid var(--primary-container); }
-        .feature-icon { font-size: 24px; color: var(--primary); margin-bottom: 10px; display: block; }
-        footer { text-align: center; padding: 40px; color: var(--text-secondary); font-size: 0.9rem; }
-        footer a { color: var(--primary); text-decoration: none; font-weight: 600; margin-top: 10px; display: inline-block; }
-    </style>
+    <title>Novum Finanzas | La Novum forma de llevar tus finanzas</title>
+    <meta name="description"
+        content="Gestiona tus finanzas personales con inteligencia artificial. Análisis con Gemini 1.5 Flash, escaneo de tickets y control total de tu patrimonio.">
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <div class="logo-placeholder">📊</div>
-        <h1>Novum Finanzas</h1>
-        <p>Gestión financiera inteligente con privacidad garantizada.</p>
-    </header>
-    <div class="container">
-        <section class="features">
-            <div class="feature-card">
-                <span class="feature-icon">☁️</span>
-                <h3>Respaldos en la Nube</h3>
-                <p>Usa Google Drive para mantener tus datos sincronizados de forma privada.</p>
+    <nav>
+        <div class="logo-container">
+            <span class="brand-name" data-i18n="brand_name">[[LOGO]]ovum Finanzas</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#funciones" data-i18n="nav_features">Funciones</a></li>
+            <li><a href="#seguridad" data-i18n="nav_security">Seguridad</a></li>
+            <li><button id="lang-toggle" class="lang-selector">EN</button></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title" data-i18n="hero_title">La Novum forma de llevar tus finanzas</h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">Evoluciona tu gestión patrimonial con Inteligencia
+                    Artificial. Centraliza, automatiza y toma el control total de tu capital en tiempo real.</p>
+                <div class="cta-group">
+                    <a href="#" class="btn-primary" data-i18n="btn_coming_soon">Próximamente</a>
+                    <a href="#funciones" class="btn-secondary" data-i18n="btn_learn_more">Saber más</a>
+                </div>
             </div>
-            <div class="feature-card">
-                <span class="feature-icon">🤖</span>
-                <h3>IA de Vanguardia</h3>
-                <p>Automatización de gastos con Gemini 1.5 Flash.</p>
+            <div class="hero-image">
+                <img src="assets/hero-mockup.png" alt="Novum Finanzas App Dashboard Mockup">
             </div>
         </section>
-    </div>
+
+        <section id="seguridad" class="security-section">
+            <span class="section-tag" data-i18n="security_tag">Privacidad Total</span>
+            <h2 class="section-title" data-i18n="security_title">Tus datos son tuyos. Punto.</h2>
+
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon">🔒</div>
+                    <h3 data-i18n="sec_local_title">Almacenamiento Local</h3>
+                    <p data-i18n="sec_local_desc">Tu información se guarda cifrada en tu dispositivo.
+                    </p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">🚫☁️</div>
+                    <h3 data-i18n="sec_cloud_title">Sin Servideros Externos</h3>
+                    <p data-i18n="sec_cloud_desc">No usamos nubes propias ni vendemos tus datos. Tus finanzas no tienen
+                        cuentas que hackear.</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">🎮</div>
+                    <h3 data-i18n="sec_control_title">Control Absoluto</h3>
+                    <p data-i18n="sec_control_desc">Tú decides cuándo y dónde respaldar. Novum no tiene acceso a tus
+                        datos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="funciones" class="product-tour">
+            <span class="section-tag" data-i18n="tour_tag">Tour de Producto</span>
+            <h2 class="section-title" data-i18n="tour_title">Explora la interfaz</h2>
+
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="control" data-i18n="cat_control">Control
+                    Total</button>
+                <button class="category-tab" data-category="credit" data-i18n="cat_credit">Crédito</button>
+                <button class="category-tab" data-category="ai" data-i18n="cat_ai">IA y Futuro</button>
+                <button class="category-tab" data-category="planning" data-i18n="cat_planning">Planeación</button>
+                <button class="category-tab" data-category="org" data-i18n="cat_org">Ajustes</button>
+            </div>
+
+            <div class="tour-container">
+                <div class="tour-list">
+                    <!-- Control Total -->
+                    <div class="tour-list-item active" data-tour="resumen" data-cat="control">
+                        <h3 data-i18n="feat_resumen">Vista Resumen</h3>
+                        <p data-i18n="feat_resumen_desc">Tu salud financiera en un vistazo.</p>
+                    </div>
+                    <div class="tour-list-item" data-tour="historial" data-cat="control">
+                        <h3 data-i18n="feat_historial">Historial de movimientos</h3>
+                        <p data-i18n="feat_historial_desc">Cada movimiento registrado con detalle.</p>
+                    </div>
+                    <div class="tour-list-item" data-tour="debito" data-cat="control">
+                        <h3 data-i18n="feat_debito">Cuentas y Efectivo</h3>
+                        <p data-i18n="feat_debito_desc">Gestiona múltiples cuentas bajo control.</p>
+                    </div>
+                    <div class="tour-list-item" data-tour="fijos" data-cat="control" style="display: none;">
+                        <h3 data-i18n="feat_fijos">Gastos Fijos</h3>
+                        <p data-i18n="feat_fijos_desc">Controla tus suscripciones.</p>
+                    </div>
+                    <div class="tour-list-item" data-tour="prestamos" data-cat="control" style="display: none;">
+                        <h3 data-i18n="feat_prestamos">Préstamos</h3>
+                        <p data-i18n="feat_prestamos_desc">Control de deudas personales.</p>
+                    </div>
+                    <div class="tour-list-item" data-tour="apartados" data-cat="control" style="display: none;">
+                        <h3 data-i18n="feat_apartados">Apartados</h3>
+                        <p data-i18n="feat_apartados_desc">Separa tu dinero en botes específicos.</p>
+                    </div>
+
+                    <!-- Crédito -->
+                    <div class="tour-list-item" data-tour="credito" data-cat="credit" style="display: none;">
+                        <h3 data-i18n="feat_credito">Tarjetas de Crédito</h3>
+                        <p data-i18n="feat_credito_desc">Domina tus límites y fechas de corte.</p>
+                    </div>
+                    <div class="tour-list-item" data-tour="msi" data-cat="credit" style="display: none;">
+                        <h3 data-i18n="feat_msi">Planes MSI</h3>
+                        <p data-i18n="feat_msi_desc">Simulador avanzado para proyectar pagos.</p>
+                    </div>
+                    <div class="tour-list-item" data-tour="estados" data-cat="credit" style="display: none;">
+                        <h3 data-i18n="feat_estados">Estados de Cuenta</h3>
+                        <p data-i18n="feat_estados_desc">Análisis de ciclos de facturación.</p>
+                    </div>
+
+                    <!-- IA -->
+                    <div class="tour-list-item" data-tour="info_ia" data-cat="ai" style="display: none;">
+                        <h3 data-i18n="feat_info_ia">Integracion con Gemini</h3>
+                        <p data-i18n="feat_info_ia_desc">Sigues teniendo el control de tus datos.</p>
+                    </div>
+                    <div class="tour-list-item" data-tour="config_ia" data-cat="ai" style="display: none;">
+                        <h3 data-i18n="feat_config_ia">Conecta tu propia llave</h3>
+                        <p data-i18n="feat_config_ia_desc">Conecta tu propia llave de API para seguir teniendo el
+                            control de tus datos.</p>
+                    </div>
+                    <div class="tour-list-item" data-tour="salud_ia" data-cat="ai" style="display: none;">
+                        <h3 data-i18n="feat_salud_ia">Salud con Gemini</h3>
+                        <p data-i18n="feat_salud_ia_desc">Diagnóstico profundo generado por IA.</p>
+                    </div>
+                    <div class="tour-list-item" data-tour="foto_ia" data-cat="ai" style="display: none;">
+                        <h3 data-i18n="feat_foto_ia">Cámara IA</h3>
+                        <p data-i18n="feat_foto_ia_desc">Escanea tickets automáticamente.</p>
+                    </div>
+
+                    <!-- Planeación -->
+                    <div class="tour-list-item" data-tour="metas" data-cat="planning" style="display: none;">
+                        <h3 data-i18n="feat_metas">Metas de Ahorro</h3>
+                        <p data-i18n="feat_metas_desc">Define objetivos y mira tus ahorros crecer.</p>
+                    </div>
+                    <div class="tour-list-item" data-tour="presupuestos" data-cat="planning" style="display: none;">
+                        <h3 data-i18n="feat_presupuestos">Presupuestos</h3>
+                        <p data-i18n="feat_presupuestos_desc">Límites por categoría para evitar excesos.</p>
+                    </div>
+                    <div class="tour-list-item" data-tour="rendimientos" data-cat="planning" style="display: none;">
+                        <h3 data-i18n="feat_rendimientos">Rendimientos</h3>
+                        <p data-i18n="feat_rendimientos_desc">Visualiza el crecimiento de tu capital.</p>
+                    </div>
+
+                    <!-- Organización -->
+                    <div class="tour-list-item" data-tour="divisas" data-cat="org" style="display: none;">
+                        <h3 data-i18n="feat_divisas">Selecciona tu Divisa</h3>
+                        <p data-i18n="feat_divisas_desc">Gestiona tu capital en la moneda que prefieras.</p>
+                    </div>
+                    <div class="tour-list-item" data-tour="drive" data-cat="org" style="display: none;">
+                        <h3 data-i18n="feat_drive">Respaldo Cloud</h3>
+                        <p data-i18n="feat_drive_desc">Tus datos seguros en Google Drive.</p>
+                    </div>
+                    <div class="tour-list-item" data-tour="personalizacion" data-cat="org" style="display: none;">
+                        <h3 data-i18n="feat_personalizacion">Personalización</h3>
+                        <p data-i18n="feat_personalizacion_desc">Temas y colores Material You.</p>
+                    </div>
+                </div>
+
+                <div class="tour-display">
+                    <div class="device-frame">
+                        <div class="device-screen">
+                            <img id="tour-mockup-img" src="assets/vista resumen.JPEG" alt="Novum App Preview">
+                        </div>
+                    </div>
+                    <div class="tour-info-mobile">
+                        <h3 id="tour-feat-title" data-i18n="feat_resumen">Vista Resumen</h3>
+                        <p id="tour-feat-desc" data-i18n="feat_resumen_desc">Tu salud financiera en un vistazo. Consulta
+                            tu liquidez real y distribución mensual.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2026 Novum Finanzas</p>
-        <a href="privacy.html">Política de Privacidad</a>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo-container" style="color: white">
+                    <span class="brand-name" data-i18n="brand_name">[[LOGO]]ovum Finanzas</span>
+                </div>
+                <p data-i18n="footer_desc">La herramienta excepcional para el control financiero nivel premium.</p>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer_legal">Legal</h4>
+                <ul>
+                    <li><a href="privacy.html" data-i18n="footer_privacy">Privacidad</a></li>
+                    <li><a href="terms.html" data-i18n="footer_terms">Términos</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer_social">Comunidad</h4>
+                <ul>
+                    <li><a href="https://discord.gg/KVqeuEBHcV" target="_blank" data-i18n="footer_discord">Discord</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Novum Finanzas. All rights reserved.</p>
+            <p data-i18n="footer_made_by">Hecho con ❤️ para tu salud financiera.</p>
+        </div>
     </footer>
+
+    <script src="main.js"></script>
 </body>
+
 </html>
