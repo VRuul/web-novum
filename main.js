@@ -245,6 +245,15 @@ const tourImages = {
     fijos: 'assets/gastos fijos.JPEG'
 };
 
+// --- IMAGE PRELOADING (OPCIÓN A) ---
+function preloadTourImages() {
+    Object.values(tourImages).forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+    console.log("Novum: Preloading tour images completed.");
+}
+
 document.querySelectorAll('.tour-list-item').forEach(item => {
     item.addEventListener('click', () => {
         const key = item.getAttribute('data-tour');
@@ -298,6 +307,7 @@ window.addEventListener('DOMContentLoaded', () => {
         currentLang = savedLang;
         updateContent();
     }
+    preloadTourImages(); // Preload images for instant switching
 });
 
 // Simple Navbar Scroll Effect
