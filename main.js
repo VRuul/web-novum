@@ -305,9 +305,13 @@ window.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('novum-lang');
     if (savedLang && translations[savedLang]) {
         currentLang = savedLang;
-        updateContent();
     }
+    updateContent(); // Initialize content with current language (saved or default)
     preloadTourImages(); // Preload images for instant switching
+
+    // Boot Product Tour
+    const activeTab = document.querySelector('.category-tab.active');
+    if (activeTab) activeTab.click();
 });
 
 // Simple Navbar Scroll Effect
